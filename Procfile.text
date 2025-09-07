@@ -1,0 +1,3 @@
+web: gunicorn ip_tracking.wsgi --log-file -
+worker: celery -A ip_tracking worker --loglevel=info
+beat: celery -A ip_tracking beat --loglevel=info
